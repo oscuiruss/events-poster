@@ -1,122 +1,299 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Web программирование</title>
-    <link href="outline.css" rel="stylesheet">
+    <title>NEVENT</title>
+    <link href="css/outline.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="description" content="Главная страница">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap" rel="stylesheet">
 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li>Логотип</li>
-            <li>О проекте</li>
-            <li>Статьи</li>
-            <li>Календарь</li>
-        </ul>
+<header class="site-header">
+    <nav class="nav-bar">
+        <div class="nav-wrapper">
+            <img src="images/logo.svg" class="logo-handler" alt="nevent logo">
+            <ul class="menu-bar">
+                <li>
+                    <a href="#" class="menu-bar_item">О нас</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-bar_item">Города</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-bar_item">Календарь событий</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-bar_item">Статьи</a>
+                </li>
+            </ul>
+        </div>
+
     </nav>
 </header>
 <main>
-    <section>
-        <h1>События Санкт-Петербурга</h1>
-    </section>
-    <section>
-        <ul>
-            <li>Кино</li>
-            <li>Театр</li>
-            <li>Лекция</li>
-            <li>Стендап</li>
-            <li>Фестиваль</li>
+    <section class="type-events-filter">
+        <div class="city-center-text">
+            <h1>События Санкт-Петербурга</h1>
+        </div>
+        <ul class="filter-bar">
+            <li><a href="#"></a>Кино</li>
+            <li><a href="#"></a>Спектакли</li>
+            <li><a href="#"></a>Лекции</li>
+            <li><a href="#"></a>Стендапы</li>
+            <li><a href="#"></a>Фестивали</li>
         </ul>
     </section>
-    <section>
-        <h2>
-            Фильтры поиска
-        </h2>
-        <ul>
-            <li>Вечеренее/дневное</li>
-            <li>Дата</li>
-            <li>Продолжительность</li>
-            <li>Стоимость</li>
-            <li>С детьми</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Результаты поиска</h2>
-        <ul>
-            <ul>
-                <li>
-                    <div>
-                        <div>
-                            <h4>Стендап</h4>
+    <div class="search-container">
+        <div class="event-parameters">
+            <div class="event-parameters__filter-header">
+                <h2>
+                    Фильтры поиска
+                </h2>
+            </div>
+            <div class="event-parameters__filter">
+                <ul>
+                    <li>
+                        <legend class="legend">Когда</legend>
+                        <div class="filter-radio-button">
+                            <input type="radio" id="tomorrow" name="time" checked/>
+                            <label for="tomorrow">Завтра</label>
                         </div>
-                        <div>
-                            <article>
-                                <pre>
-,##. ,==.
-,# #. \ o ',
-# # _ _ \ \
-# # (_) (_) / ;
-`# #' / .'
-`##' "=="
-</pre>
-                            </article>
+
+                        <div class="filter-radio-button">
+                            <input type="radio" id="today" name="time" value="1"/>
+                            <label for="today">Сегодня</label>
                         </div>
-                        <div>
-                            <span><em>20:00</em></span>
+                        <div class="filter-radio-button">
+                            <input type="radio" id="weekend" name="time"/>
+                            <label for="weekend">Выходные</label>
+                        </div>
+                    </li>
+
+                    <li>
+                        <legend>Вечернее / Дневаное</legend>
+                        <div class="filter-radio-button">
+                            <input type="radio" id="evening" name="is-day" checked/>
+                            <label for="evening">Вечернее</label>
+                        </div>
+
+                        <div class="filter-radio-button">
+                            <input type="radio" id="day" name="is-day"/>
+                            <label for="today">Дневное</label>
+                        </div>
+                    </li>
+
+                    <li>
+                        <legend>Стоимость</legend>
+                        <div class="filter-radio-button">
+                            <input type="radio" id="less-thousand" name="cost" checked/>
+                            <label for="less-thousand">До 1000</label>
+                        </div>
+
+                        <div class="filter-radio-button">
+                            <input type="radio" id="less-5-thousand" name="cost"/>
+                            <label for="less-5-thousand">До 5000</label>
+                        </div>
+                        <div class="filter-radio-button">
+                            <input type="radio" id="any" name="cost"/>
+                            <label for="any">Любая</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="events">
+            <ul class="events__search-result">
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
+                        </div>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
+                        </div>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div>
-                        <div>
-                            <h4>Михайловский театр</h4>
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
                         </div>
-                        <div>
-                            <article>Опытные актеры и талантливые художники сотворили настоящее волшебство на сцене,
-                                чтобы заполучить вас в свой ореол искусства. Чарующая синхронность движений, неподражаемая
-                                игра актеров и глубокая эмоциональная проработка каждой сцены погрузят вас в историю,
-                                открывающую новые грани человеческой души. </article>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
                         </div>
-                        <div>
-                            <span><em>19:00</em></span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div>
-                            <h4>Лекция в Русском музее</h4>
-                        </div>
-                        <div>
-                            <article>На этой лекции вы сможете окунуться в историю искусства, соприкоснуться с творчеством
-                                великих мастеров и открыть для себя новые грани русской культуры.</article>
-                        </div>
-                        <div>
-                            <span><em>17:00</em></span>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div>
-                        <div>
-                            <h4>Мероприятие Яндекса</h4>
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
                         </div>
-                        <div>
-                            <article>Погрузитесь в захватывающую атмосферу, где вас ожидают увлекательные выступления экспертов, интерактивные демонстрации новых продуктов и возможность задать вопросы топ-специалистам в области информационных технологий.</article>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
                         </div>
-                        <div>
-                            <span><em>18:00</em></span>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
                         </div>
                     </div>
                 </li>
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
+                        </div>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
+                        </div>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
+                        </div>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
+                        </div>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
+                        </div>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
+                        </div>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
+                        </div>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
+                        </div>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="events__item">
+                    <div class="events__item-box">
+                        <div class="events__image">
+                            <img src="images/komissarenko.png" alt="">
+                        </div>
+                        <div class="events__item-name">
+                            Концерт Славы Комиссаренко
+                        </div>
+
+                        <div class="events__item-description">
+                            <p>
+                                <span class="event-date">15 октября</span>
+                            </p>
+                            <div class="events__add-info">
+                                <span class="event-place">
+                               Концертный клуб A2
+                            </span>
+                                <span class="event-price">1000<small>P</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
             </ul>
-        </ul>
-    </section>
+        </div>
+    </div>
 </main>
-<footer>
+<footer class="footer-bar">
     <ul>
         <li><a href="tel:+7(921)875-43-71">+7(921)875-43-71</a></li>
         <li><a href="mailto:doombl.dor@gmail.com">doombl.dor@gmail.com</a></li>
