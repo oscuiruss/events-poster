@@ -9,6 +9,8 @@ html, body {
     padding: 0;
     margin: 0;
     position: relative;
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
 }
 
 a {
@@ -223,19 +225,19 @@ main {
 
 @media (max-width: 768px) {
     .events__item-box {
-        width: 33.33vw !important; /* 3 элемента в одном ряду */
+        width: 33.33vw !important;
     }
 }
 
 @media (max-width: 480px) {
     .events__item-box {
-        width: 50vw !important; /* 2 элемента в одном ряду */
+        width: 50vw !important;
     }
 }
 
 @media (max-width: 320px) {
     .events__item-box {
-        width: 100vw !important; /* 1 элемент в одном ряду */
+        width: 100vw !important;
     }
 
     .city-center-text h1 {
