@@ -78,6 +78,10 @@ main {
     opacity: 0.7;
 }
 
+.menu-bar_active {
+    font-weight: bold;
+}
+
 .menu-bar_item {
     font-size: 20px;
 }
