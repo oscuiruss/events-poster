@@ -11,6 +11,7 @@
 
     <script src="scripts/active-menu.js"></script>
     <script src="scripts/time-measure.js"></script>
+    <script src="scripts/articles.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -38,6 +39,24 @@
         </div>
     </nav>
 </header>
+<main>
+    <div class="articles-header-text">
+        <h1>Наши статьи</h1>
+    </div>
+    <div class="articles-container">
+        <div class="loader-container">
+            <img src="images/loadlurk-loading.gif" class="loader">
+        </div>
+        <div class="articles-content">
+            <template id="article-template">
+                <div class="article">
+                    <div class="article-title"></div>
+                    <div class="article-body"></div>
+                </div>
+            </template>
+        </div>
+    </div>
+</main>
 <footer class="footer-bar">
     <div class="footer-bar__links">
         <div><a href="tel:+7(921)875-43-71">+7(921)875-43-71</a></div>
