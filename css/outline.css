@@ -554,3 +554,12 @@ input {
 .glide * {
     margin: 0 auto;
 }
+
+
+.shaded_button {
+    opacity: 1;
+    color: #2a2922 !important;
+    background: #B97FFA !important;
+    font-weight: 800;
+}
+
